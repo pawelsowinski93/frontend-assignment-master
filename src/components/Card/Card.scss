@@ -1,0 +1,154 @@
+.app {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 90vh;
+
+        .card {
+
+            &__wrapper {
+                width: 45rem;
+                height: 30rem;
+                overflow-y: hidden;
+                overflow-x: hidden;
+                border-style: groove;
+                padding: 1rem;
+                position: relative;
+            }
+
+            &__source {
+                display: inline-block;
+                position: absolute;
+                top: 7rem;
+
+                &-input-wrapper {
+
+                    &__input {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        input {
+                            margin: .5rem;
+                        }
+
+                        p {
+                            margin: 0
+                        }
+                    }
+                }
+            }
+
+            &__sort {
+                display: flex;
+                position: absolute;
+                top: 5rem;
+                right: 5rem;
+            }
+
+            &__articles {
+                position: absolute;
+                top: 7rem;
+                left: 8rem;
+                max-height: 25rem;
+                overflow: scroll;
+
+                &__list-item {
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    &__img {
+                        width: 8.5rem;
+                        height: 5.5rem;
+
+                        img {
+                            height: 4.5rem;
+                        }
+                    }
+
+                    &__content {
+                        flex-basis: 70%;
+                        max-height: 4.5rem;
+                        overflow: hidden;
+
+                        &__title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                        }
+
+                        &__content {
+                            max-width: 23rem;
+                            max-height: 3.5rem;
+                            overflow: hidden;
+
+                            p {
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+
+                    p.title,
+                    p.subtitle {
+                        margin: 0
+                    }
+
+                    p.title {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 860px) {
+        &__wrapper {
+            .card {
+                &__wrapper {
+                    width: 20rem;
+                    padding: 1rem;
+                }
+
+                &__source {
+                    top: 3rem;
+
+                    &-input-wrapper {
+                        display: flex;
+                    }
+                }
+
+                &__sort {
+                    top: 3rem;
+                    right: 1rem;
+                }
+
+                &__articles {
+                    left: 1rem;
+
+                    &__list-item {
+                        &__content {
+                            &__title {
+                                justify-content: space-around;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                height: 100%;
+                            }
+
+                            &__content {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+#section-title {
+    text-decoration: underline;
+}
