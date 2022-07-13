@@ -1,4 +1,4 @@
-export interface IList {
+export interface IArticles {
   id: number;
   date: string;
   image: string;
@@ -7,4 +7,4 @@ export interface IList {
   preamble: string;
 }
 
-export type DataTypes = ["Fashion" | "Sports"];
+export type articleTypes = ["Fashion" | "Sports"];

@@ -1,0 +1,42 @@
+@media all and (max-width: 860px) {
+    .app {
+        &__wrapper {
+            .card {
+                width: 20rem;
+                padding: 1rem;
+
+                &__source {
+                    top: 3rem;
+
+                    &__input {
+                        display: flex;
+                    }
+                }
+
+                &__sort {
+                    top: 3rem;
+                    right: 1rem;
+                }
+
+                &__articles {
+                    left: 1rem;
+
+                    &__list-item {
+                        &__content {
+                            &__title {
+                                justify-content: space-around;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                height: 100%;
+                            }
+
+                            &__description {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
