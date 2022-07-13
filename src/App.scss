@@ -1,3 +1,110 @@
 ::-webkit-scrollbar {
     width: 0px;
 }
+
+.app {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 90vh;
+
+        .card {
+            width: 45rem;
+            height: 30rem;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            border-style: groove;
+            padding: 1rem;
+            position: relative;
+
+            &__source {
+                display: inline-block;
+                position: absolute;
+                top: 7rem;
+
+                &__input {
+                    &__wrapper {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        input {
+                            margin: .5rem;
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            &__sort {
+                display: flex;
+                position: absolute;
+                top: 5rem;
+                right: 5rem;
+            }
+
+            &__articles {
+                position: absolute;
+                top: 7rem;
+                left: 8rem;
+                max-height: 25rem;
+                overflow: scroll;
+
+                &__list-item {
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    &__img {
+                        width: 8.5rem;
+                        height: 5.5rem;
+
+                        img {
+                            height: 4.5rem;
+                        }
+                    }
+
+                    &__content {
+                        max-width: 23rem;
+                        max-height: 3.5rem;
+                        overflow: hidden;
+
+                        &__title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                        }
+
+                        &__description {
+                            max-width: 23rem;
+                            max-height: 3.5rem;
+                            overflow: hidden;
+
+                            p {
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+
+                    p.title,
+                    p.subtitle {
+                        margin: 0
+                    }
+
+                    p.title {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section-title {
+    text-decoration: underline;
+}
